@@ -107,8 +107,17 @@ ul {
   background: #fff;
   border-radius: 20px;
 
-  & > section + section {
-    margin-top: 50px;
+  & > section:first-child {
+    padding-top: 0px;
+  }
+
+  & > section:last-child {
+    padding-bottom: 0px;
+  }
+
+  & > section {
+    padding-top: 25px;
+    padding-bottom: 25px;
   }
 }
 </style>

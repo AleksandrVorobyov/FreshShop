@@ -24,9 +24,9 @@ export default {
                 },
             ],
             options: {
+                type: 'fade',
                 rewind: true,
                 perPage: 1,
-                gap: "1rem",
                 height: 300,
                 speed: 1300,
                 classes: {

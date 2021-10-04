@@ -12,25 +12,13 @@ export default {
 };
 </script>
 <style scoped lang="scss">
-.header {
-  position: relative;
-  padding: 100px 0;
-  overflow: hidden;
-  z-index: 500;
-  background: white;
-}
-
-.header-wrap {
-  position: relative;
-}
-
 .promo-card {
   position: relative;
   border-radius: 16px;
-  overflow: hidden;
   width: 100%;
   height: 150px;
   box-shadow: 0 0 10px #a3a3a3;
+  overflow: hidden;
 }
 
 .promo-card__link {
@@ -39,10 +27,11 @@ export default {
   left: 0;
   width: 100%;
   height: 100%;
-  transition: opacity 0.3s linear;
+  transition: all 0.3s linear;
 
   &:hover {
     opacity: 0.7;
+    transform: scale(1.1);
   }
 
   img {

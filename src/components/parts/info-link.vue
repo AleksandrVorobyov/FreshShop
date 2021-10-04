@@ -25,14 +25,14 @@ export default {
     left: 0;
     width: 100%;
     height: 4px;
-    background: var(--clrLinkActive);
+    background: var(--clrActivegreen);
     content: "";
     opacity: 0;
     transition: opacity 0.4s linear;
   }
 
   &:hover {
-    color: var(--clrLinkActive);
+    color: var(--clrActivegreen);
   }
 
   &:hover::before {
@@ -41,6 +41,6 @@ export default {
 }
 
 .orange-link {
-  color: var(--clrLinkActive);
+  color: var(--clrActivegreen);
 }
 </style>

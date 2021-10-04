@@ -48,7 +48,7 @@ export default {
   transition: color 0.3s linear;
 
   &:hover {
-    color: var(--clrLinkActive);
+    color: var(--clrActivegreen);
   }
 }
 
@@ -74,6 +74,7 @@ export default {
 .card-title__btn:hover {
   background-color: transparent;
   text-shadow: none;
+  color: #fff;
 }
 
 .card-title__btn:hover:before {
@@ -91,7 +92,7 @@ export default {
   width: 100%;
   z-index: -1;
   content: "";
-  background: var(--clrLinkActive);
+  background: var(--bgPage);
   transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
 }
 </style>

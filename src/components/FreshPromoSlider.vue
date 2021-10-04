@@ -34,6 +34,7 @@ export default {
     padding: 0;
     border-radius: 22px;
     overflow: hidden;
+    background: #d1d1d1;
     box-shadow: 0px 0px 10px #d1d1d1;
   }
 }

@@ -20,19 +20,25 @@ export default {
 .card-product {
   position: relative;
   padding: 15px;
-  overflow: hidden;
-  z-index: 100;
-  border: 2px solid gray;
+  border: 2px solid var(--clrActivegreen);
   border-radius: 20px;
   width: 100%;
   height: 100%;
+  background: #ffffff;
+  overflow: hidden;
+  z-index: 100;
+  transition: all .3s linear;
+
+  &:hover {
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+  }
 }
 
 .card-product__img {
   position: relative;
   height: 160px;
   width: 100%;
-  background: rgb(255, 255, 255);
+  background: var(--clrWhite);
   margin-bottom: 10px;
 
   img {
@@ -49,12 +55,12 @@ export default {
     position: absolute;
     top: 10px;
     left: 10px;
-    color: var(--clrActivegreen);
+    color: var(--clrWhite);
     font-size: 14px;
     letter-spacing: 2px;
     font-weight: 700;
     padding: 5px 10px;
-    background: rgba(167, 255, 79, 0.5);
+    background: var(--bgPage);
     border-radius: 16px;
   }
 }

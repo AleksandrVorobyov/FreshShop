@@ -85,14 +85,14 @@ export default {
   }
 
   &:hover {
-    color: var(--clrLinkActive);
+    color: var(--clrActivegreen);
 
     &::before {
-      background: var(--clrLinkActive);
+      background: var(--clrActivegreen);
     }
 
     svg {
-      fill: var(--clrLinkActive);
+      fill: var(--clrActivegreen);
     }
   }
 }
