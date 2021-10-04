@@ -2,7 +2,12 @@
 section.promo-cards
   .container
     .promo-cards-wrap
-      promo-card(v-for="(card, idx) in promoCards.cards", :key="card" :option="card" :idx="idx + 1")
+      promo-card(
+        v-for="(card, idx) in promoCards.cards",
+        :key="card",
+        :option="card",
+        :idx="idx + 1"
+      )
 </template>
 <script>
 import { mapGetters } from "vuex";
@@ -26,7 +31,12 @@ export default {
 .promo-cards-wrap {
   position: relative;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 300px);
+  justify-content: center;
   gap: 20px;
+
+  @media (min-width: 1260px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 </style>

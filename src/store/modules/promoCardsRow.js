@@ -6,21 +6,25 @@ export default {
           src: "promoCardsRow/01.jpg",
           alt: "food-card-",
           link: "#",
+          title: "Books"
         },
         {
           src: "promoCardsRow/02.jpg",
           alt: "food-card-",
           link: "#",
+          title: "Candys"
         },
         {
           src: "promoCardsRow/03.jpg",
           alt: "food-card-",
           link: "#",
+          title: "Scarves"
         },
         {
           src: "promoCardsRow/04.jpg",
           alt: "food-card-",
           link: "#",
+          title: "Meat"
         },
       ],
     },

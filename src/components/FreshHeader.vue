@@ -7,13 +7,12 @@ section.header
           .header__info-item(v-for="link in item.col")
             info-link(:link="link") 
       .header__nav
-        .header__nav-col(v-for="item in header.nav")
-          .header__nav-logo-wrap(v-if="item.logo")
-            logo(:logo="item.logo")
-          .header__nav-search(v-if="item.search")
-            header-search(:item="item.search")
-          .header__nav-basket(v-if="item.basket")
-            menu-basket(:basket="item.basket")
+        .header__nav-logo-wrap
+          logo(:logo="header.nav.logo")
+        .header__nav-search
+          header-search(:item="header.nav.search")
+        .header__nav-basket
+          menu-basket(:basket="header.nav.basket")
 </template>
 <script>
 import { mapGetters } from "vuex";
@@ -58,7 +57,11 @@ export default {
 }
 
 .header__info-item + .header__info-item {
-  margin-left: 30px;
+  margin-left: 15px;
+
+  @media (min-width: 970px) {
+    margin-left: 30px;
+  }
 }
 
 .header__nav-logo-wrap {
@@ -75,5 +78,19 @@ export default {
   padding: 40px 0;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+
+  & > * + * {
+    margin-top: 30px;
+  }
+
+  @media (min-width: 970px) {
+    flex-direction: row;
+
+    & > * + * {
+      margin-top: 0px;
+    }
+  }
 }
 </style>

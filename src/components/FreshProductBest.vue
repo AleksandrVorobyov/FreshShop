@@ -33,9 +33,14 @@ export default {
 .product-best-wrap {
   position: relative;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 300px;
+  grid-template-columns: repeat(2, 280px);
+  justify-content: center;
   gap: 20px;
+
+  @media (min-width: 1260px) {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 300px;
+  }
 }
 
 .product-best__card {

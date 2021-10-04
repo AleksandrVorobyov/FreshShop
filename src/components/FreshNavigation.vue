@@ -38,7 +38,13 @@ export default {
 
 .navigation__list {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+
+  @media (min-width: 970px) {
+    justify-content: space-around;
+  }
 }
 
 .navigation__list-item {
@@ -48,10 +54,14 @@ export default {
 .navigation__list-title {
   position: relative;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1;
   color: #ffffff;
   transition: color 0.3s linear;
+
+  @media (min-width: 1260px) {
+    font-size: 16px;
+  }
 
   &::before {
     position: absolute;

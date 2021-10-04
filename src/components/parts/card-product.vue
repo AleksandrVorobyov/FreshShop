@@ -24,10 +24,10 @@ export default {
   border-radius: 20px;
   width: 100%;
   height: 100%;
-  background: #ffffff;
+  background: var(--bgCards);
   overflow: hidden;
   z-index: 100;
-  transition: all .3s linear;
+  transition: all 0.3s linear;
 
   &:hover {
     filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
@@ -40,6 +40,8 @@ export default {
   width: 100%;
   background: var(--clrWhite);
   margin-bottom: 10px;
+  border-radius: 12px;
+  overflow: hidden;
 
   img {
     position: absolute;
@@ -70,7 +72,7 @@ export default {
   font-weight: 700;
   font-size: 16px;
   line-height: 1;
-  color: var(--clrTtl);
+  color: var(--clrWhite);
 }
 
 .card-product__subtitle {
@@ -78,7 +80,7 @@ export default {
   font-weight: 500;
   font-size: 14px;
   line-height: 1;
-  color: var(--clrText);
+  color: var(--clrWhite);
 }
 
 .card-product__desc {
@@ -90,7 +92,7 @@ export default {
 .card-product__desc-price {
   font-weight: 600;
   font-size: 18px;
-  color: var(--clrTtl);
+  color: var(--clrWhite);
   line-height: 1;
 }
 
@@ -98,15 +100,15 @@ export default {
   padding: 5px 10px;
   font-weight: 600;
   font-size: 16px;
-  color: var(--clrTtl);
+  color: var(--clrWhite);
   line-height: 1;
-  border: 2px solid var(--clrTtl);
+  border: 2px solid var(--clrWhite);
   border-radius: 16px;
   transition: all 0.3s linear;
 
   &:hover {
-    border: 2px solid var(--clrActivegreen);
-    color: var(--clrActivegreen);
+    border: 2px solid var(--bgCardsHover);
+    color: var(--bgCardsHover);
   }
 }
 </style>

@@ -1,5 +1,5 @@
 <template lang="pug">
-a.header__info-link.info-link(:href="link.href", :class="link.class") {{ link.text }}
+router-link.header__info-link.info-link(:to="link.href", :class="link.class") {{ link.text }}
 </template>
 <script>
 export default {

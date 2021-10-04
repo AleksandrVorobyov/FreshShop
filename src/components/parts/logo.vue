@@ -1,5 +1,5 @@
 <template lang="pug">
-a.logo(:href="logo.href") {{ logo.text }}
+router-link.logo(:to="logo.href") {{ logo.text }}
 </template>
 <script>
 export default {

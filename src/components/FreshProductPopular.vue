@@ -2,7 +2,10 @@
 section.product-popular
   .container
     .product-popular-wrap
-      .product-best-col(v-for="content in productPopular.content", :key="content")
+      .product-best-col(
+        v-for="content in productPopular.content",
+        :key="content"
+      )
         .product-best__desc(v-if="content.desc")
           card-title(:cardTitle="content.desc")
         .product-best__card(v-if="content.card")
@@ -32,7 +35,12 @@ export default {
 .product-popular-wrap {
   position: relative;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 280px);
+  justify-content: center;
   gap: 20px;
+
+  @media (min-width: 1260px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 </style>

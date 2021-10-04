@@ -9,6 +9,9 @@
     fresh-product-best
     fresh-promo-cards-row
     fresh-product-popular
+    fresh-blog
+  footer
+    fresh-footer
 </template>
 
 <script>
@@ -19,6 +22,8 @@ import FreshPromoCards from "@/components/FreshPromoCards.vue";
 import FreshProductBest from "@/components/FreshProductBest.vue";
 import FreshPromoCardsRow from "@/components/FreshPromoCardsRow.vue";
 import FreshProductPopular from "@/components/FreshProductPopular.vue";
+import FreshBlog from "@/components/FreshBlog.vue";
+import FreshFooter from "@/components/FreshFooter.vue";
 
 export default {
   name: "Home",
@@ -30,6 +35,8 @@ export default {
     FreshProductBest,
     FreshPromoCardsRow,
     FreshProductPopular,
+    FreshBlog,
+    FreshFooter,
   },
 };
 </script>

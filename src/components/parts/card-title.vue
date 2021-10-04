@@ -58,23 +58,22 @@ export default {
   padding: 10px 20px;
   font-size: 22px;
   line-height: 1;
+  color: #fff;
   letter-spacing: 1px;
-  color: #000;
   cursor: pointer;
   outline: none;
   border-radius: 20px;
   overflow: hidden;
-  background: #4cfff69d;
+  background: var(--bgCardsHover);
   cursor: pointer;
   position: relative;
-  border: 2px solid var(--clrActivegreen);
+  border: 2px solid var(--bgCardsHover);
   transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
 }
 
 .card-title__btn:hover {
-  background-color: transparent;
+  background: transparent;
   text-shadow: none;
-  color: #fff;
 }
 
 .card-title__btn:hover:before {
@@ -92,7 +91,7 @@ export default {
   width: 100%;
   z-index: -1;
   content: "";
-  background: var(--bgPage);
+  background: var(--bgCards);
   transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
 }
 </style>

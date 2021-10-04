@@ -7,7 +7,7 @@ export default {
                         {
                             text: "Chat with us",
                             href: "#",
-                            class: "orange-link"
+                            class: ""
                         },
                         {
                             text: "+420 336 775 664",
@@ -25,7 +25,7 @@ export default {
                     col: [
                         {
                             text: "Blog",
-                            href: "#",
+                            href: "/blog",
                             class: "orange-link"
                         },
                         {
@@ -41,50 +41,44 @@ export default {
                     ]
                 }
             ],
-            nav: [
-                {
-                    logo: {
-                        text: "FreshShopCom",
-                        href: "#"
+            nav: {
+                logo: {
+                    text: "FreshShopCom",
+                    href: "/"
+                },
+                search: {
+                    dropdown: {
+                        title: "All categories",
+                        src: "icons/arrow-right.svg",
+                        categories: [
+                            "Woman",
+                            "Man",
+                            "Children",
+                            "Shoes",
+                            "Accessories",
+                            "Electronics",
+                            "Books",
+                            "Sport",
+                            "School",
+                            "Food",
+                        ]
+                    },
+                    input: {
+                        placeholder: "Search Products, categories ..."
+                    },
+                    btn: {
+                        src: "icons/search.svg",
                     },
                 },
-                {
-                    search: {
-                        dropdown: {
-                            title: "All categories",
-                            src: "icons/arrow-right.svg",
-                            categories: [
-                                "Woman",
-                                "Man",
-                                "Children",
-                                "Shoes",
-                                "Accessories",
-                                "Electronics",
-                                "Books",
-                                "Sport",
-                                "School",
-                                "Food",
-                            ]
-                        },
-                        input: {
-                            placeholder: "Search Products, categories ..."
-                        },
-                        btn: {
-                            src: "icons/search.svg",
-                        },
-                    }
+                basket: {
+                    profile: {
+                        src: "icons/user.svg"
+                    },
+                    cart: {
+                        src: "icons/cart.svg"
+                    },
                 },
-                {
-                    basket: {
-                        profile: {
-                            src: "icons/user.svg"
-                        },
-                        cart: {
-                            src: "icons/cart.svg"
-                        },
-                    }
-                },
-            ]
+            }
         },
     },
     getters: {

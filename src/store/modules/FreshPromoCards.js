@@ -5,42 +5,50 @@ export default {
                 {
                     src: "promoCards/01.jpg",
                     alt: "food-card-",
-                    link: "#"
+                    link: "#",
+                    title: "Snacks",
                 },
                 {
                     src: "promoCards/02.jpg",
                     alt: "food-card-",
-                    link: "#"
+                    link: "#",
+                    title: "Ice Cream",
                 },
                 {
                     src: "promoCards/03.jpg",
                     alt: "food-card-",
-                    link: "#"
+                    link: "#",
+                    title: "Snickers",
                 },
                 {
                     src: "promoCards/04.jpg",
                     alt: "food-card-",
-                    link: "#"
+                    link: "#",
+                    title: "Vegetables",
                 },
                 {
                     src: "promoCards/05.jpg",
                     alt: "food-card-",
-                    link: "#"
+                    link: "#",
+                    title: "Bear",
                 },
                 {
                     src: "promoCards/06.jpg",
                     alt: "food-card-",
-                    link: "#"
+                    link: "#",
+                    title: "Fruits",
                 },
                 {
                     src: "promoCards/07.jpg",
                     alt: "food-card-",
-                    link: "#"
+                    link: "#",
+                    title: "Gum",
                 },
                 {
                     src: "promoCards/08.jpg",
                     alt: "food-card-",
-                    link: "#"
+                    link: "#",
+                    title: "Juice",
                 },
             ]
         },

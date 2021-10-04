@@ -8,6 +8,9 @@
   --bgPage: linear-gradient(to right, #11b5cb 0, #481173 100%) no-repeat;
   --bgHeaderSearch: #f9f9f9;
   --bgBodyDrop: #dbdbdb;
+  --bgMain: #fff;
+  --bgCards: #20b2aa;
+  --bgCardsHover: bisque;
 
   --borderHeaderInfo: #bdbdbd;
 
@@ -31,6 +34,7 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  margin: 0;
 }
 
 html {
@@ -49,7 +53,7 @@ body {
   margin: 0;
   width: 100%;
   font-family: var(--fontRegular);
-  color: var(--black);
+  color: var(--clrTtl);
   line-height: 1;
   font-size: 16px;
   font-weight: 400;
@@ -99,21 +103,17 @@ ul {
   max-width: 1260px;
   width: 100%;
   margin: auto;
-  padding: 0 45px;
+  padding: 0 15px;
+
+  @media (min-width: 720px) {
+    padding: 0 45px;
+  }
 }
 
 #home-page main {
-  padding: 50px 0;
-  background: #fff;
+  padding: 25px 0;
+  background: var(--bgMain);
   border-radius: 20px;
-
-  & > section:first-child {
-    padding-top: 0px;
-  }
-
-  & > section:last-child {
-    padding-bottom: 0px;
-  }
 
   & > section {
     padding-top: 25px;
