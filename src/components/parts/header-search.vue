@@ -46,43 +46,61 @@ export default {
 <style scoped lang="scss">
 .header-search {
   position: relative;
-  width: 500px;
+  width: 100%;
   height: 50px;
+  padding: 0px 10px;
   display: flex;
   align-items: center;
   background: var(--bgHeaderSearch);
   border-radius: 12px;
   z-index: 100;
   box-shadow: inset 0px 0px 1px 2px var(--shadowHeaderSearch);
+
+  @media (min-width: 360px) {
+    padding: 0px 20px;
+  }
+
+  @media (min-width: 550px) {
+    width: 500px;
+    padding: 0;
+  }
 }
 
-.header-search__dropdown + .header-search__input {
-  margin-left: 48px;
+@media (min-width: 550px) {
+  .header-search__dropdown + .header-search__input {
+    margin-left: 48px;
+  }
 }
 
 .header-search__input {
   position: relative;
 
-  &::before {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: -24px;
-    content: "";
-    background: var(--shadowHeaderSearch);
-    height: 20px;
-    width: 1px;
+  @media (min-width: 550px) {
+    &::before {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: -24px;
+      content: "";
+      background: var(--shadowHeaderSearch);
+      height: 20px;
+      width: 1px;
+    }
   }
 }
 
 .header-search__dropdown-head {
   position: relative;
+  display: none;
   padding: 10px 0 10px 15px;
   cursor: pointer;
   width: 130px;
   height: 50px;
-  display: flex;
-  align-items: center;
+
+  @media (min-width: 550px) {
+    align-items: center;
+    display: flex;
+  }
 
   span {
     position: absolute;
@@ -169,7 +187,7 @@ export default {
 }
 
 .search-input {
-  width: 260px;
+  width: 220px;
   font-weight: normal;
   font-size: 14px;
   line-height: 19px;
@@ -182,6 +200,10 @@ export default {
   &:hover,
   &:focus {
     border-bottom: 2px solid var(--clrSearchText);
+  }
+
+  @media (min-width: 360px) {
+    width: 260px;
   }
 }
 

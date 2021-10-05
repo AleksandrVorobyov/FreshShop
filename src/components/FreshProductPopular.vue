@@ -35,9 +35,13 @@ export default {
 .product-popular-wrap {
   position: relative;
   display: grid;
-  grid-template-columns: repeat(2, 280px);
+  grid-template-columns: minmax(0, 300px);
   justify-content: center;
   gap: 20px;
+
+  @media (min-width: 720px) {
+    grid-template-columns: repeat(2, 280px);
+  }
 
   @media (min-width: 1260px) {
     grid-template-columns: repeat(4, 1fr);

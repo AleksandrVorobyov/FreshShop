@@ -96,8 +96,7 @@ export default {
 
 .blog__content {
   display: grid;
-  grid-template-areas: "blogTwo blogThree" "blogOne blogOne";
-  justify-content: center;
+  grid-template-areas: "blogOne" "blogThree";
   gap: 30px;
 
   > *:nth-child(1) {
@@ -105,13 +104,24 @@ export default {
   }
   > *:nth-child(2) {
     grid-area: blogTwo;
+    display: none;
+
+    @media (min-width: 720px) {
+      display: block;
+    }
   }
   > *:nth-child(3) {
     grid-area: blogThree;
   }
 
+  @media (min-width: 720px) {
+    grid-template-areas: "blogTwo blogThree" "blogOne blogOne";
+    justify-content: center;
+  }
+
   @media (min-width: 1260px) {
     grid-template-areas: "blogOne blogTwo blogThree";
+    grid-template-columns: 470px 270px 370px;
     justify-content: space-between;
   }
 }

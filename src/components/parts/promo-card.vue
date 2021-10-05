@@ -20,9 +20,13 @@ export default {
   position: relative;
   border-radius: 16px;
   width: 100%;
-  height: 150px;
+  height: 125px;
   box-shadow: 0 0 10px #a3a3a3;
   overflow: hidden;
+
+  @media (min-width: 360px) {
+    height: 150px;
+  }
 
   &:hover {
     .promo-card__info {

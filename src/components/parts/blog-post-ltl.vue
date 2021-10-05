@@ -20,12 +20,13 @@ export default {
 .blog-post-ltl {
   position: relative;
   z-index: 500;
-  width: 370px;
+  width: 100%;
   height: 100px;
   display: grid;
   grid-template-columns: 249px 96px;
   grid-template-rows: 100px;
   align-items: center;
+  justify-content: space-between;
   gap: 24px;
   border-radius: 6px;
   overflow: hidden;
@@ -35,6 +36,10 @@ export default {
   &:hover {
     box-shadow: 0px 0px 5px #0003;
     background: var(--bgCards);
+  }
+
+  @media (min-width: 720px) {
+   justify-content: flex-start;
   }
 
   @media (min-width: 1260px) {

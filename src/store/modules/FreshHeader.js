@@ -19,26 +19,28 @@ export default {
                             href: "#",
                             class: ""
                         },
-                    ]
+                    ],
+                    class: "page-header-link"
                 },
                 {
                     col: [
                         {
                             text: "Blog",
                             href: "/blog",
-                            class: "orange-link"
+                            class: "active-link"
                         },
                         {
                             text: "About Us",
                             href: "#",
-                            class: "orange-link"
+                            class: "active-link"
                         },
                         {
                             text: "Careers",
                             href: "#",
-                            class: "orange-link"
+                            class: "active-link"
                         },
-                    ]
+                    ],
+                    class: "page-header-nav"
                 }
             ],
             nav: {
@@ -78,7 +80,8 @@ export default {
                         src: "icons/cart.svg"
                     },
                 },
-            }
+            },
+            burder: "Menu"
         },
     },
     getters: {

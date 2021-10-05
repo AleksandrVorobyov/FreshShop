@@ -3,7 +3,15 @@ section.header
   .container
     .header-wrap
       .header__info
-        .header__info-col(v-for="item in header.info", :key="item")
+        .header__info-col.header__info-col--burger
+          button.header__info-burger-btn
+            span 
+          h5.header__info-burger-title {{ header.burder }}
+        .header__info-col(
+          v-for="item in header.info",
+          :key="item",
+          :class="item.class"
+        )
           .header__info-item(v-for="link in item.col")
             info-link(:link="link") 
       .header__nav
@@ -36,7 +44,7 @@ export default {
 <style scoped lang="scss">
 .header {
   position: relative;
-  z-index: 1000;
+  z-index: 1500;
 }
 
 .header-wrap {
@@ -54,6 +62,29 @@ export default {
 
 .header__info-col {
   display: flex;
+}
+
+.header__info-col.page-header-link,
+.header__info-col.page-header-nav {
+  display: none;
+  @media (min-width: 360px) {
+    display: flex;
+  }
+}
+
+.header__info-col.page-header-link {
+  display: none;
+  @media (min-width: 720px) {
+    display: flex;
+  }
+}
+
+.header__info-col.header__info-col--burger {
+  display: flex;
+  align-items: center;
+  @media (min-width: 720px) {
+    display: none;
+  }
 }
 
 .header__info-item + .header__info-item {
@@ -92,5 +123,56 @@ export default {
       margin-top: 0px;
     }
   }
+}
+
+.header__info-burger-btn {
+  position: relative;
+  width: 40px;
+  height: 30px;
+  cursor: pointer;
+  border: 2px solid var(--clrWhite);
+  background: #fff3;
+  cursor: pointer;
+  outline: none;
+  border-radius: 6px;
+
+  &::before {
+    position: absolute;
+    top: 5px;
+    left: 3px;
+    height: 2px;
+    width: calc(100% - 6px);
+    background: var(--clrWhite);
+    content: "";
+  }
+
+  &::after {
+    position: absolute;
+    bottom: 5px;
+    left: 3px;
+    height: 2px;
+    width: calc(100% - 6px);
+    background: var(--clrWhite);
+    content: "";
+  }
+
+  span::before {
+    position: absolute;
+    top: 50%;
+    left: 3px;
+    transform: translateY(-50%);
+    height: 2px;
+    width: calc(100% - 6px);
+    background: var(--clrWhite);
+    content: "";
+  }
+}
+
+.header__info-burger-title {
+  margin-left: 10px;
+  font-size: 24px;
+  line-height: 1;
+  font-weight: 700;
+  color: var(--clrWhite);
 }
 </style>

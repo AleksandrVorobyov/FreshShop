@@ -14,10 +14,14 @@ export default {
   display: block;
   font-family: var(--fontRegular);
   font-weight: 700;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1;
   color: var(--clrLink);
   transition: color 0.4s linear;
+
+  @media (min-width: 970px) {
+    font-size: 16px;
+  }
 
   &::before {
     position: absolute;
@@ -40,7 +44,7 @@ export default {
   }
 }
 
-.orange-link {
+.active-link {
   color: var(--clrActivegreen);
 }
 </style>

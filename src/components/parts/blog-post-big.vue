@@ -27,7 +27,6 @@ export default {
 <style scoped lang="scss">
 .blog-post-big {
   position: relative;
-  min-width: 400px;
   width: 100%;
   height: 400px;
   padding: 25px;
