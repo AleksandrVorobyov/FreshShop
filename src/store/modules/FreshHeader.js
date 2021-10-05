@@ -7,17 +7,20 @@ export default {
                         {
                             text: "Chat with us",
                             href: "#",
-                            class: ""
+                            class: "",
+                            type: "link",
                         },
                         {
                             text: "+420 336 775 664",
-                            href: "#",
-                            class: ""
+                            href: "tel:+420336775664",
+                            class: "",
+                            type: "link",
                         },
                         {
                             text: "info@freshnesecom.com",
-                            href: "#",
-                            class: ""
+                            href: "mailto:info@freshnesecom.com",
+                            class: "",
+                            type: "link",
                         },
                     ],
                     class: "page-header-link"
@@ -27,17 +30,20 @@ export default {
                         {
                             text: "Blog",
                             href: "/blog",
-                            class: "active-link"
+                            class: "active-link",
+                            type: "page",
                         },
                         {
                             text: "About Us",
-                            href: "#",
-                            class: "active-link"
+                            href: "/about",
+                            class: "active-link",
+                            type: "page",
                         },
                         {
                             text: "Careers",
-                            href: "#",
-                            class: "active-link"
+                            href: "/career",
+                            class: "active-link",
+                            type: "page",
                         },
                     ],
                     class: "page-header-nav"

@@ -1,5 +1,6 @@
 <template lang="pug">
-router-link.header__info-link.info-link(:to="link.href", :class="link.class") {{ link.text }}
+router-link.header__info-link.info-link(v-if="link.type == 'page'" :to="link.href", :class="link.class") {{ link.text }}
+a.header__info-link.info-link(v-if="link.type == 'link'" :href="link.href", :class="link.class") {{ link.text }}
 </template>
 <script>
 export default {
@@ -40,6 +41,14 @@ export default {
   }
 
   &:hover::before {
+    opacity: 1;
+  }
+}
+
+.header__info-link.info-link.router-link-active {
+  color: var(--clrActivegreen);
+
+  &::before {
     opacity: 1;
   }
 }

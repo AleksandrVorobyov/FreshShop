@@ -1,10 +1,10 @@
 <template lang="pug">
-#home-page
+#blog-page
   header
     fresh-header
     fresh-navigation
   main
-    fresh-blog
+    fresh-blog-page
   footer
     fresh-footer
 </template>
@@ -12,7 +12,7 @@
 <script>
 import FreshHeader from "@/components/FreshHeader.vue";
 import FreshNavigation from "@/components/FreshNavigation.vue";
-import FreshBlog from "@/components/FreshBlog.vue";
+import FreshBlogPage from "@/components/FreshBlogPage.vue";
 import FreshFooter from "@/components/FreshFooter.vue";
 
 export default {
@@ -20,7 +20,7 @@ export default {
   components: {
     FreshHeader,
     FreshNavigation,
-    FreshBlog,
+    FreshBlogPage,
     FreshFooter,
   },
 };

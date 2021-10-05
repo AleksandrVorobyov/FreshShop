@@ -50,14 +50,15 @@ export default {
 .navigation-wrap {
   position: relative;
   border-top: 1px solid var(--borderHeaderInfo);
-  padding: 15px 0;
 }
 
 .navigation__list {
   display: flex;
   justify-content: flex-start;
+  padding: 15px 0;
   gap: 40px;
   flex-wrap: wrap;
+  z-index: 50;
 
   @media (min-width: 480px) {
     justify-content: center;
@@ -130,7 +131,7 @@ export default {
 
 .navigation__menu {
   position: absolute;
-  top: 100%;
+  top: 0%;
   left: 0;
   padding: 15px;
   width: 100%;
@@ -138,11 +139,10 @@ export default {
   background: var(--bgPage);
   box-shadow: 0px 0px 4px #0003;
   border-radius: 0px 0px 12px 12px;
-  transform: rotateX(90deg);
-  transform-origin: 50% 50% 0px;
   opacity: 0;
   pointer-events: none;
   transition: all 0.6s ease-in;
+  z-index: -10;
 
   &::before {
     position: absolute;
@@ -158,8 +158,7 @@ export default {
 }
 
 .navigation__menu--active {
-  transform: rotateX(0deg);
-  transform-origin: 0;
+  top: 100%;
   opacity: 1;
   pointer-events: all;
 }

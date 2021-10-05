@@ -110,7 +110,7 @@ ul {
   }
 }
 
-#home-page main {
+#home-page main, #blog-page main {
   padding: 25px 0;
   background: var(--bgMain);
   border-radius: 20px;

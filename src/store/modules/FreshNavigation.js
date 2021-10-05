@@ -566,8 +566,7 @@ export default {
         navMenuUnlock(state, event) {
             const navMenu = document.querySelector(".navigation__menu");
             navMenu.classList.add("navigation__menu--active");
-            const thisLinkId = event.target.id;
-            const newItemMenu = state.navigation.list.find(e => e.id === thisLinkId)
+            const newItemMenu = state.navigation.list.find(e => e.id === event.target.id)
             return state.thisMenu = newItemMenu.menu;
         },
 

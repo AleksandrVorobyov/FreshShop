@@ -9,6 +9,7 @@ import promoCardsRow from "./modules/promoCardsRow";
 import FreshProductPopular from "./modules/FreshProductPopular";
 import FreshBlog from "./modules/FreshBlog";
 import FreshFooter from "./modules/FreshFooter";
+import FreshBlogPage from "./modules/FreshBlogPage";
 
 export default createStore({
   state: {},
@@ -24,5 +25,6 @@ export default createStore({
     FreshProductPopular,
     FreshBlog,
     FreshFooter,
+    FreshBlogPage,
   },
 });
