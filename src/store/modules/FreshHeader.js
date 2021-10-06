@@ -28,6 +28,12 @@ export default {
                 {
                     col: [
                         {
+                            text: "Home",
+                            href: "/",
+                            class: "active-link",
+                            type: "page",
+                        },
+                        {
                             text: "Blog",
                             href: "/blog",
                             class: "active-link",
@@ -36,12 +42,6 @@ export default {
                         {
                             text: "About Us",
                             href: "/about",
-                            class: "active-link",
-                            type: "page",
-                        },
-                        {
-                            text: "Careers",
-                            href: "/career",
                             class: "active-link",
                             type: "page",
                         },

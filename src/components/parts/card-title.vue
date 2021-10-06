@@ -4,13 +4,17 @@
   ul.card-title__list
     li.card-title__list-item(v-for="item in cardTitle.list")
       a.card-title__list-link(:href="item.href") {{ item.text }}
-  button.card-title__btn
-    span {{ cardTitle.btn }}
+  main-btn(:btn="cardTitle.btn" :class="'card-title__btn'")
 </template>
 <script>
+import mainBtn from "./main-btn.vue";
+
 export default {
   props: {
     cardTitle: Object,
+  },
+  components: {
+    mainBtn,
   },
 };
 </script>
@@ -53,45 +57,15 @@ export default {
 }
 
 .card-title__btn {
-  position: relative;
   display: block;
   padding: 10px 20px;
   font-size: 22px;
   line-height: 1;
   color: #fff;
   letter-spacing: 1px;
-  cursor: pointer;
-  outline: none;
   border-radius: 20px;
   overflow: hidden;
   background: var(--bgCardsHover);
-  cursor: pointer;
-  position: relative;
   border: 2px solid var(--bgCardsHover);
-  transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
-}
-
-.card-title__btn:hover {
-  background: transparent;
-  text-shadow: none;
-}
-
-.card-title__btn:hover:before {
-  bottom: 0%;
-  top: auto;
-  height: 100%;
-}
-
-.card-title__btn:before {
-  display: block;
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  height: 0px;
-  width: 100%;
-  z-index: -1;
-  content: "";
-  background: var(--bgCards);
-  transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
 }
 </style>

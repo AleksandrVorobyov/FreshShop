@@ -26,15 +26,224 @@ export default {
                     href: "/blog"
                 },
             ],
-            midPosts: {
-                src: "blog/02.jpg",
-                alt: "big-post-02",
-                href: "/blog",
-                tag: "Vegetable",
-                title: "Which vegetable your family will love and want’s eat each day",
-                author: "Anna",
-                date: "15. 6. 2021"
-            },
+            midPosts: [
+                {
+                    src: "blog/01.jpg",
+                    alt: "big-post-01",
+                    href: "/blog",
+                    tag: "Vegetable",
+                    title: "Which vegetable your family will love and want’s eat each day",
+                    author: "Anna",
+                    date: "15. 6. 2021"
+                },
+                {
+                    src: "blog/02.jpg",
+                    alt: "big-post-02",
+                    href: "/blog",
+                    tag: "Vegetable",
+                    title: "Which vegetable your family will love and want’s eat each day",
+                    author: "Anna",
+                    date: "15. 6. 2021"
+                },
+                {
+                    src: "blog/03.jpg",
+                    alt: "big-post-03",
+                    href: "/blog",
+                    tag: "Vegetable",
+                    title: "Which vegetable your family will love and want’s eat each day",
+                    author: "Anna",
+                    date: "15. 6. 2021"
+                },
+                {
+                    src: "blog/04.jpg",
+                    alt: "big-post-04",
+                    href: "/blog",
+                    tag: "Vegetable",
+                    title: "Which vegetable your family will love and want’s eat each day",
+                    author: "Anna",
+                    date: "15. 6. 2021"
+                },
+                {
+                    src: "blog/05.jpg",
+                    alt: "big-post-05",
+                    href: "/blog",
+                    tag: "Vegetable",
+                    title: "Which vegetable your family will love and want’s eat each day",
+                    author: "Anna",
+                    date: "15. 6. 2021"
+                },
+                {
+                    src: "blog/06.jpg",
+                    alt: "big-post-06",
+                    href: "/blog",
+                    tag: "Vegetable",
+                    title: "Which vegetable your family will love and want’s eat each day",
+                    author: "Anna",
+                    date: "15. 6. 2021"
+                },
+                {
+                    src: "blog/07.jpg",
+                    alt: "big-post-07",
+                    href: "/blog",
+                    tag: "Vegetable",
+                    title: "Which vegetable your family will love and want’s eat each day",
+                    author: "Anna",
+                    date: "15. 6. 2021"
+                },
+                {
+                    src: "blog/08.jpg",
+                    alt: "big-post-08",
+                    href: "/blog",
+                    tag: "Vegetable",
+                    title: "Which vegetable your family will love and want’s eat each day",
+                    author: "Anna",
+                    date: "15. 6. 2021"
+                },
+                {
+                    src: "blog/08.jpg",
+                    alt: "big-post-05",
+                    href: "/blog",
+                    tag: "Vegetable",
+                    title: "Which vegetable your family will love and want’s eat each day",
+                    author: "Anna",
+                    date: "15. 6. 2021"
+                },
+                {
+                    src: "blog/07.jpg",
+                    alt: "big-post-07",
+                    href: "/blog",
+                    tag: "Vegetable",
+                    title: "Which vegetable your family will love and want’s eat each day",
+                    author: "Anna",
+                    date: "15. 6. 2021"
+                },
+                {
+                    src: "blog/06.jpg",
+                    alt: "big-post-06",
+                    href: "/blog",
+                    tag: "Vegetable",
+                    title: "Which vegetable your family will love and want’s eat each day",
+                    author: "Anna",
+                    date: "15. 6. 2021"
+                },
+                {
+                    src: "blog/05.jpg",
+                    alt: "big-post-05",
+                    href: "/blog",
+                    tag: "Vegetable",
+                    title: "Which vegetable your family will love and want’s eat each day",
+                    author: "Anna",
+                    date: "15. 6. 2021"
+                },
+                {
+                    src: "blog/04.jpg",
+                    alt: "big-post-04",
+                    href: "/blog",
+                    tag: "Vegetable",
+                    title: "Which vegetable your family will love and want’s eat each day",
+                    author: "Anna",
+                    date: "15. 6. 2021"
+                },
+                {
+                    src: "blog/03.jpg",
+                    alt: "big-post-03",
+                    href: "/blog",
+                    tag: "Vegetable",
+                    title: "Which vegetable your family will love and want’s eat each day",
+                    author: "Anna",
+                    date: "15. 6. 2021"
+                },
+                {
+                    src: "blog/02.jpg",
+                    alt: "big-post-02",
+                    href: "/blog",
+                    tag: "Vegetable",
+                    title: "Which vegetable your family will love and want’s eat each day",
+                    author: "Anna",
+                    date: "15. 6. 2021"
+                },
+                {
+                    src: "blog/01.jpg",
+                    alt: "big-post-01",
+                    href: "/blog",
+                    tag: "Vegetable",
+                    title: "Which vegetable your family will love and want’s eat each day",
+                    author: "Anna",
+                    date: "15. 6. 2021"
+                },
+                {
+                    src: "blog/01.jpg",
+                    alt: "big-post-01",
+                    href: "/blog",
+                    tag: "Vegetable",
+                    title: "Which vegetable your family will love and want’s eat each day",
+                    author: "Anna",
+                    date: "15. 6. 2021"
+                },
+                {
+                    src: "blog/02.jpg",
+                    alt: "big-post-02",
+                    href: "/blog",
+                    tag: "Vegetable",
+                    title: "Which vegetable your family will love and want’s eat each day",
+                    author: "Anna",
+                    date: "15. 6. 2021"
+                },
+                {
+                    src: "blog/03.jpg",
+                    alt: "big-post-03",
+                    href: "/blog",
+                    tag: "Vegetable",
+                    title: "Which vegetable your family will love and want’s eat each day",
+                    author: "Anna",
+                    date: "15. 6. 2021"
+                },
+                {
+                    src: "blog/04.jpg",
+                    alt: "big-post-04",
+                    href: "/blog",
+                    tag: "Vegetable",
+                    title: "Which vegetable your family will love and want’s eat each day",
+                    author: "Anna",
+                    date: "15. 6. 2021"
+                },
+                {
+                    src: "blog/05.jpg",
+                    alt: "big-post-05",
+                    href: "/blog",
+                    tag: "Vegetable",
+                    title: "Which vegetable your family will love and want’s eat each day",
+                    author: "Anna",
+                    date: "15. 6. 2021"
+                },
+                {
+                    src: "blog/06.jpg",
+                    alt: "big-post-06",
+                    href: "/blog",
+                    tag: "Vegetable",
+                    title: "Which vegetable your family will love and want’s eat each day",
+                    author: "Anna",
+                    date: "15. 6. 2021"
+                },
+                {
+                    src: "blog/07.jpg",
+                    alt: "big-post-07",
+                    href: "/blog",
+                    tag: "Vegetable",
+                    title: "Which vegetable your family will love and want’s eat each day",
+                    author: "Anna",
+                    date: "15. 6. 2021"
+                },
+                {
+                    src: "blog/08.jpg",
+                    alt: "big-post-08",
+                    href: "/blog",
+                    tag: "Vegetable",
+                    title: "Which vegetable your family will love and want’s eat each day",
+                    author: "Anna",
+                    date: "15. 6. 2021"
+                },
+            ],
             aside: [
                 {
                     title: "Archives",
@@ -98,18 +307,73 @@ export default {
                         btn: "Subscribe",
                     },
                 },
-            ]
+            ],
+            pagination: {
+                prevBtn: "Prev page",
+                nextBtn: "Next page",
+                pageNumber: 0,
+                maxComponetsImPage: '',
+            }
         },
     },
     getters: {
         blogPage(state) {
             return state.blogPage;
         },
+        pageCount(state) {
+            let l = state.blogPage.midPosts.length,
+                s = state.blogPage.pagination.maxComponetsImPage;
+            return Math.ceil(l / s);
+        },
+        paginatedData(state) {
+            const start = state.blogPage.pagination.pageNumber * state.blogPage.pagination.maxComponetsImPage,
+                end = start + state.blogPage.pagination.maxComponetsImPage;
+            return state.blogPage.midPosts.slice(start, end);
+        },
+        disabledPrev(state) {
+            if (state.blogPage.pagination.pageNumber === 0) {
+                return false;
+            } else {
+                return true
+            }
+        },
+        disabledNext(state) {
+            if ((state.blogPage.pagination.pageNumber + 1) == Math.ceil(state.blogPage.midPosts.length / state.blogPage.pagination.maxComponetsImPage)) {
+                return false;
+            } else {
+                return true
+            }
+        },
     },
     mutations: {
         blogPage(state, payload) {
             console.log(state.blogPage);
         },
+        blogPageCardsPrev(state) {
+            state.blogPage.pagination.pageNumber--;
+        },
+        blogPageCardsNext(state) {
+            state.blogPage.pagination.pageNumber++;
+        },
+        blogSubsForm() {
+            console.log('Form submit push');
+        },
+        scrollMidPost() {
+            const blockID = document.getElementById('blogPageBody')
+            blockID.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            })
+        },
+        blogPageWindow(state) {
+            if (window.innerWidth > 1170) {
+                return state.blogPage.pagination.maxComponetsImPage = 8
+            } else if (window.innerWidth > 970 && window.innerWidth < 1170) {
+                return state.blogPage.pagination.maxComponetsImPage = 6
+            } else {
+                return state.blogPage.pagination.maxComponetsImPage = 3
+            }
+        }
     },
     actions: {
         blogPage({ commit, state }, products) {
