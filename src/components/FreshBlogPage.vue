@@ -281,10 +281,4 @@ export default {
 .blog-page__pagination-btn {
   padding: 5px 15px;
 }
-
-.blog-page__pagination-btn.disabled-on {
-  opacity: 0.5;
-  cursor: default;
-  pointer-events: none;
-}
 </style>

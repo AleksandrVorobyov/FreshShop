@@ -48,4 +48,10 @@ export default {
     transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
   }
 }
+
+.main-btn.disabled-on {
+  opacity: 0.5;
+  cursor: default;
+  pointer-events: none;
+}
 </style>
