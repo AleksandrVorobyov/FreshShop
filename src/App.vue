@@ -110,7 +110,12 @@ ul {
   }
 }
 
-#home-page main, #blog-page main {
+.relative {
+  position: relative;
+}
+
+#home-page main,
+#blog-page main {
   padding: 25px 0;
   background: var(--bgMain);
   border-radius: 20px;

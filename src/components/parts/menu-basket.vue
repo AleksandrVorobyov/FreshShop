@@ -1,7 +1,7 @@
 <template lang="pug">
 .menu-basket
   .menu-basket__item
-    button#menu-basket-profile.menu-basket__btn
+    button#menu-basket-profile.menu-basket__btn(@click="sectionLoginActive()")
       user-icon
   .menu-basket__item
     button#menu-basket-cart.menu-basket__btn
@@ -18,6 +18,11 @@ export default {
   components: {
     userIcon,
     cartIcon,
+  },
+  methods: {
+    sectionLoginActive() {
+      this.$store.commit("sectionLoginActive");
+    },
   },
 };
 </script>

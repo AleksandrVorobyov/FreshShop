@@ -10,10 +10,16 @@ import FreshProductPopular from "./modules/FreshProductPopular";
 import FreshBlog from "./modules/FreshBlog";
 import FreshFooter from "./modules/FreshFooter";
 import FreshBlogPage from "./modules/FreshBlogPage";
+import FreshLogin from "./modules/FreshLogin";
 
 export default createStore({
   state: {},
-  mutations: {},
+  mutations: {
+    sectionLoginActive() {
+      const loginSection = document.getElementById("loginSection");
+      loginSection.classList.toggle("login--active")
+    }
+  },
   actions: {},
   modules: {
     FreshHeader,
@@ -26,5 +32,6 @@ export default createStore({
     FreshBlog,
     FreshFooter,
     FreshBlogPage,
+    FreshLogin,
   },
 });

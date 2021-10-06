@@ -2,6 +2,7 @@
 #home-page
   header
     fresh-header
+    fresh-login
     fresh-navigation
   main
     fresh-promo-slider
@@ -17,6 +18,7 @@
 <script>
 import FreshHeader from "@/components/FreshHeader.vue";
 import FreshNavigation from "@/components/FreshNavigation.vue";
+import FreshLogin from "@/components/FreshLogin.vue";
 import FreshPromoSlider from "@/components/FreshPromoSlider.vue";
 import FreshPromoCards from "@/components/FreshPromoCards.vue";
 import FreshProductBest from "@/components/FreshProductBest.vue";
@@ -30,6 +32,7 @@ export default {
   components: {
     FreshHeader,
     FreshNavigation,
+    FreshLogin,
     FreshPromoSlider,
     FreshPromoCards,
     FreshProductBest,
