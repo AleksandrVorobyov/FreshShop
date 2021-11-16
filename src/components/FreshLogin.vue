@@ -54,37 +54,59 @@ export default {
 
 .login--active .login__form {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateX(50%) translateY(0px);
   pointer-events: all;
+
+  @media (min-width: 970px) {
+    transform: translateY(0);
+  }
 }
 
 .login__form {
   position: absolute;
   top: 100%;
-  right: 45px;
+  right: 50%;
   padding: 20px;
   overflow: hidden;
   z-index: 2000;
   background: white;
   box-shadow: 0px 0px 10px #0003;
   opacity: 0;
-  transform: translateY(-30px);
+  transform: translateX(50%) translateY(-30px);
   transition: all 0.4s linear;
   pointer-events: none;
   display: grid;
   gap: 10px;
   border-radius: 12px;
   grid-template-columns: minmax(0, 350px);
+  width: 100%;
+  justify-content: center;
+
+  @media (min-width: 480px) {
+    width: 390px;
+    justify-content: start;
+  }
+
+  @media (min-width: 970px) {
+    right: 45px;
+    transform: translateY(-30px);
+  }
 }
 
 .login__title {
   display: block;
   margin-bottom: 20px;
-  font-size: 24px;
+  font-size: 26px;
   font-weight: 700;
   line-height: 1;
   color: var(--clrTtl);
   letter-spacing: 1px;
+  text-align: center;
+
+  @media (min-width: 480px) {
+    font-size: 24px;
+    text-align: left;
+  }
 }
 
 .login__label {
@@ -154,9 +176,10 @@ export default {
 .login__form-btn-change-btn {
   transition: color 0.3s linear;
   cursor: pointer;
+  color: var(--clrActivegreen);
 
   &:hover {
-    color: var(--clrActivegreen);
+    color: var(--clrLinkActive);
   }
 }
 </style>

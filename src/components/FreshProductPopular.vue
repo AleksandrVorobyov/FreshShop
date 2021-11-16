@@ -6,10 +6,10 @@ section#productPopular.product-popular
         v-for="content in productPopularPaginated",
         :key="content"
       )
-        .product-best__desc(v-if="content.desc")
-          card-title(:cardTitle="content.desc")
-        .product-best__card(v-if="content.card")
-          card-product(:cardInfo="content.card")
+        .product-best__desc(v-if="content.type")
+          card-title(:cardTitle="content", @action="$router.push('shop')")
+        .product-best__card(v-if="!content.type")
+          card-product(:cardInfo="content")
     .product-best__pagination
       .product-best__pagination-link
         h3.blog-best__pagination-link-title Page:
@@ -41,6 +41,7 @@ export default {
       "productPopularPaginated",
       "productPopularDisabledNext",
       "productPopularDisabledPrev",
+      "shopProductCards",
     ]),
   },
   components: {
@@ -61,9 +62,37 @@ export default {
     productPopularWindow() {
       this.$store.commit("productPopularWindow");
     },
+    popularCards() {
+      if (this.productPopular.content.length == 1) {
+        const mainArray = [];
+
+        for (let index = 0; index < this.shopProductCards.length; index++) {
+          const element = this.shopProductCards[index];
+          mainArray.push(element);
+        }
+
+        const newMainArray = mainArray.sort(function (a, b) {
+          return b.rating - a.rating;
+        });
+
+        const bestFilter = newMainArray.splice(0, 11);
+
+        bestFilter.forEach((element) => {
+          this.productPopular.content.push(element);
+        });
+      }
+    },
   },
   created() {
     this.productPopularWindow();
+  },
+  watch: {
+    shopProductCards() {
+      this.popularCards();
+    },
+  },
+  mounted() {
+    this.popularCards();
   },
 };
 </script>

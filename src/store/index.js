@@ -11,14 +11,21 @@ import FreshBlog from "./modules/FreshBlog";
 import FreshFooter from "./modules/FreshFooter";
 import FreshBlogPage from "./modules/FreshBlogPage";
 import FreshLogin from "./modules/FreshLogin";
+import FreshShop from "./modules/FreshShop";
+import FreshBreadCrumbs from "./modules/FreshBreadCrumbs";
 
 export default createStore({
-  state: {},
+  state: {
+    cardsMain: "Your cards!"
+  },
   mutations: {
-    sectionLoginActive() {
-      const loginSection = document.getElementById("loginSection");
-      loginSection.classList.toggle("login--active")
-    }
+    scrollTop() {
+      const blockID = document.getElementById('page')
+      blockID.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      })
+    },
   },
   actions: {},
   modules: {
@@ -32,6 +39,8 @@ export default createStore({
     FreshBlog,
     FreshFooter,
     FreshBlogPage,
+    FreshShop,
     FreshLogin,
+    FreshBreadCrumbs
   },
 });

@@ -313,7 +313,7 @@ export default {
                 nextBtn: "Next page",
                 pageNumber: 0,
                 maxComponetsImPage: '',
-            }
+            },
         },
     },
     getters: {

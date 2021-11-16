@@ -37,28 +37,22 @@ section.blog-page
                 )
         .blog-page__body-cards
           blog-post-mid(v-for="item in paginatedData", :blog="item")
-      .blog-page__pagination
-        .blog-page__pagination-link
-          h3.blog-page__pagination-link-title Page:
-          span {{ blogPage.pagination.pageNumber + 1 }}
-          span /
-          span(v-html="pageCount")
-        .blog-page__pagination-btns
-          main-btn(
-            :btn="blogPage.pagination.prevBtn",
-            :class="'blog-page__pagination-btn blog-page__pagination-btn--prev ' + (disabledPrev ? '' : 'disabled-on')",
-            @action="blogPageCardsPrev(), scrollMidPost()"
-          )
-          main-btn(
-            :btn="blogPage.pagination.nextBtn",
-            :class="'blog-page__pagination-btn blog-page__pagination-btn--next ' + (disabledNext ? '' : 'disabled-on')",
-            @action="blogPageCardsNext(), scrollMidPost()"
-          )
+      .blog-page__paginationw
+        pagination(
+          :object-info="blogPage",
+          :pageShopCount="pageCount",
+          :disabledShopPrev="disabledPrev",
+          :disabledShopNext="disabledNext",
+          @btnPrev="blogPageCardsPrev()",
+          @btnNext="blogPageCardsNext()",
+          @scrollToSection="scrollMidPost()"
+        )
 </template>
 <script>
 import { mapGetters } from "vuex";
 import blogPostBig from "./parts/blog-post-big.vue";
 import blogPostMid from "./parts/blog-post-mid.vue";
+import pagination from "./parts/pagination.vue";
 import mainBtn from "./parts/main-btn.vue";
 export default {
   computed: {
@@ -74,6 +68,7 @@ export default {
     blogPostBig,
     blogPostMid,
     mainBtn,
+    pagination,
   },
   methods: {
     blogPageCardsPrev() {
@@ -245,40 +240,6 @@ export default {
 
 .blog-page__pagination {
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column-reverse;
-  gap: 40px;
-
-  @media (min-width: 720px) {
-    flex-direction: row;
-    gap: 0;
-  }
 }
 
-.blog-page__pagination-link {
-  display: flex;
-  align-items: flex-end;
-
-  @media (min-width: 720px) {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 0;
-  }
-
-  span {
-    margin-left: 15px;
-  }
-}
-
-.blog-page__pagination-btns {
-  display: flex;
-  gap: 15px;
-}
-
-.blog-page__pagination-btn {
-  padding: 5px 15px;
-}
 </style>

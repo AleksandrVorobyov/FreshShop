@@ -1,6 +1,6 @@
 <template lang="pug">
 .blog-post-big
-  router-link.blog-post-big__link(:to="blog.href")
+  router-link.blog-post-big__link(:to="blog.href", @click="scrollTop()")
   .blog-post-big__bg
     img(:src="require('@/assets/img/' + blog.src)", :alt="blog.alt")
   .blog-post-big__tag
@@ -21,6 +21,11 @@
 export default {
   props: {
     blog: Object,
+  },
+  methods: {
+    scrollTop() {
+      this.$store.commit("scrollTop");
+    },
   },
 };
 </script>
@@ -46,6 +51,10 @@ export default {
 
     .blog-post-big__bg {
       filter: grayscale(0.8) blur(2px);
+    }
+
+    .blog-post-big__body-title {
+      animation: blogPostTitle 0.3s linear 0s;
     }
   }
 }
@@ -147,5 +156,15 @@ export default {
   font-size: 16px;
   line-height: 1;
   color: #ffffff;
+}
+
+@keyframes blogPostTitle {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 </style>

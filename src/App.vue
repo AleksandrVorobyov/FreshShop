@@ -3,6 +3,42 @@
   <router-view/>
 </template>
 
+<script>
+export default {
+  mounted() {
+    document.onclick = function (e) {
+      const headerSearchDropBody = document.getElementById(
+        "header-search-drop-body"
+      );
+
+      if (
+        headerSearchDropBody.classList.contains(
+          "header-search__dropdown-body--active"
+        )
+      ) {
+        if (e.target.closest(".header-search__dropdown-body--active")) {
+          return true;
+        } else if (e.target.className != "header-search__dropdown-head") {
+          headerSearchDropBody.classList.remove(
+            "header-search__dropdown-body--active"
+          );
+        }
+      }
+
+      const loginSection = document.getElementById("loginSection");
+
+      if (loginSection.classList.contains("login--active")) {
+        if (e.target.closest(".login--active")) {
+          return true;
+        } else if (e.target.className != "menu-basket__btn") {
+          loginSection.classList.remove("login--active");
+        }
+      }
+    };
+  },
+};
+</script>
+
 <style lang="scss">
 :root {
   --bgPage: linear-gradient(to right, #11b5cb 0, #481173 100%) no-repeat;
@@ -10,6 +46,7 @@
   --bgBodyDrop: #dbdbdb;
   --bgMain: #fff;
   --bgCards: #20b2aa;
+  --bgDescCards: #ececec;
   --bgCardsHover: bisque;
 
   --borderHeaderInfo: #bdbdbd;
@@ -22,6 +59,7 @@
   --clrTtl: #151515;
   --clrText: #575757;
   --clrSearchText: #a9a9a9;
+  --clrFilterInputGreen: #6a983c;
 
   --cartCount: "4";
 
@@ -115,9 +153,10 @@ ul {
 }
 
 #home-page main,
+#shop-page main,
 #blog-page main {
   padding: 25px 0;
-  background: var(--bgMain);
+  background: linear-gradient(#fff, #fff);
   border-radius: 20px;
 
   & > section {

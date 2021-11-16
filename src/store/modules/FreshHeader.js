@@ -40,8 +40,8 @@ export default {
                             type: "page",
                         },
                         {
-                            text: "About Us",
-                            href: "/about",
+                            text: "Shop",
+                            href: "/shop",
                             class: "active-link",
                             type: "page",
                         },
@@ -132,13 +132,13 @@ export default {
                 "header-search-drop-body"
             );
 
-            document.onclick = function (e) {
-                if (e.target.className != "header-search__dropdown-head") {
-                    headerSearchDropBody.classList.remove(
-                        "header-search__dropdown-body--active"
-                    );
-                }
-            };
+            // document.onclick = function (e) {
+            //     if (e.target.className != "header-search__dropdown-head") {
+            //         headerSearchDropBody.classList.remove(
+            //             "header-search__dropdown-body--active"
+            //         );
+            //     }
+            // };
         }
     },
     actions: {

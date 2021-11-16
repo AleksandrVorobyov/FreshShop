@@ -5,6 +5,18 @@
     span(v-if="cardInfo.sale") {{ cardInfo.sale }}
   h3.card-product__title {{ cardInfo.title }}
   h4.card-product__subtitle {{ cardInfo.subtitle }}
+  .card-product__rating
+    .rating.rating__set
+      .rating__body
+        .rating__active
+        .rating__items
+          input.rating__star(
+            v-for="(item, idx) in 5",
+            type="radio",
+            :value="idx + 1",
+            name="rating-star"
+          )
+      .rating__value {{ cardInfo.rating }}
   .card-product__desc
     h5.card-product__desc-price {{ cardInfo.price }}
     a.card-product__desc-link(:href="cardInfo.href") {{ cardInfo.btn }}
@@ -13,6 +25,16 @@
 export default {
   props: {
     cardInfo: Object,
+  },
+  methods: {
+    cardRatingInit() {
+      this.$store.commit("cardRatingInit");
+    },
+  },
+  mounted() {
+    if (document.querySelectorAll(".rating").length > 0) {
+      this.cardRatingInit();
+    }
   },
 };
 </script>
@@ -110,5 +132,68 @@ export default {
     border: 2px solid var(--bgCardsHover);
     color: var(--bgCardsHover);
   }
+}
+
+.card-product__rating {
+  margin-bottom: 10px;
+}
+
+.rating {
+  display: flex;
+  align-items: flex-end;
+  font-size: 40px;
+  line-height: 0.75;
+}
+
+.rating__body {
+  position: relative;
+}
+
+.rating__body:before {
+  content: "★★★★★";
+  display: block;
+  color: #151515;
+}
+
+.rating__active {
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.rating__active::before {
+  content: "★★★★★";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: block;
+  color: #FDBC15;
+}
+
+.rating__items {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.rating__star {
+  flex: 0 0 20%;
+  height: 100%;
+  opacity: 0;
+}
+
+.rating__value {
+  font-size: 0px;
+  line-height: 1;
+  padding: 0 0 0 0px;
+  color: #fff;
 }
 </style>

@@ -3,8 +3,12 @@
   h3.card-title__title {{ cardTitle.title }}
   ul.card-title__list
     li.card-title__list-item(v-for="item in cardTitle.list")
-      a.card-title__list-link(:href="item.href") {{ item.text }}
-  main-btn(:btn="cardTitle.btn" :class="'card-title__btn'")
+      router-link.card-title__list-link(:to="item.href") {{ item.text }}
+  main-btn(
+    :btn="cardTitle.btn",
+    :class="'card-title__btn'",
+    @action="$emit('action'), scrollTop()"
+  )
 </template>
 <script>
 import mainBtn from "./main-btn.vue";
@@ -16,6 +20,12 @@ export default {
   components: {
     mainBtn,
   },
+  emits: ["action"],
+  methods: {
+    scrollTop() {
+      this.$store.commit("scrollTop");
+    },
+  },
 };
 </script>
 <style scoped lang="scss">
@@ -23,6 +33,9 @@ export default {
   position: relative;
   overflow: hidden;
   z-index: 100;
+  padding: 24.5px 10px;
+  border-radius: 20px;
+  background: var(--bgDescCards);
 }
 
 .card-title__title {

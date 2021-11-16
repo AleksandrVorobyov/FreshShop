@@ -1,7 +1,7 @@
 <template lang="pug">
 .blog-post-mid
   .blog-post-mid__img
-    router-link.blog-post-mid__img-link(:to="blog.href")
+    router-link.blog-post-mid__img-link(:to="blog.href", @click="scrollTop()")
       img(:src="require('@/assets/img/' + blog.src)", :alt="blog.alt")
   .blog-post-mid__body
     span.blog-post-mid__body-tag {{ blog.tag }}
@@ -15,6 +15,11 @@ export default {
   props: {
     blog: Object,
   },
+  methods: {
+    scrollTop() {
+      this.$store.commit("scrollTop");
+    },
+  },
 };
 </script>
 <style scoped lang="scss">
@@ -24,16 +29,16 @@ export default {
   z-index: 500;
   width: 270px;
   border-radius: 12px;
-  transition: box-shadow 0.3s linear, background 0.3s linear;
+  transition: background 0.3s linear;
   background: var(--bgCards);
+  box-shadow: 0px 0px 5px #0003;
 
   &:hover {
-    box-shadow: 0px 0px 5px #0003;
     background: var(--bgCards);
   }
 
   @media (min-width: 1260px) {
-    background: transparent;
+    background: #fff;
   }
 }
 
@@ -57,7 +62,7 @@ export default {
   &:hover {
     img {
       transform: scale(1.1);
-      opacity: .8;
+      opacity: 0.8;
     }
   }
 
@@ -69,7 +74,7 @@ export default {
     height: 100%;
     object-fit: cover;
     object-position: center;
-    transition: all .3s linear;
+    transition: all 0.3s linear;
   }
 }
 

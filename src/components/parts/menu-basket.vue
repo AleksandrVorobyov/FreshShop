@@ -58,6 +58,7 @@ export default {
     object-fit: contain;
     transition: all 0.3s linear;
     fill: rgba(255, 255, 255, 0);
+    pointer-events: none;
   }
 
   &:hover {

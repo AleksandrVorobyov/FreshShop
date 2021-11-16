@@ -26,6 +26,7 @@ import FreshPromoCardsRow from "@/components/FreshPromoCardsRow.vue";
 import FreshProductPopular from "@/components/FreshProductPopular.vue";
 import FreshBlog from "@/components/FreshBlog.vue";
 import FreshFooter from "@/components/FreshFooter.vue";
+import { mapGetters, mapState } from "vuex";
 
 export default {
   name: "Home",
@@ -40,6 +41,20 @@ export default {
     FreshProductPopular,
     FreshBlog,
     FreshFooter,
+  },
+
+  computed: {
+    ...mapGetters(["shopProductCards"]),
+  },
+  methods: {
+    loadProductCards() {
+      this.$store.dispatch("loadProductCards");
+    },
+  },
+  mounted() {
+    if (this.shopProductCards.length === 0) {
+      this.loadProductCards();
+    }
   },
 };
 </script>

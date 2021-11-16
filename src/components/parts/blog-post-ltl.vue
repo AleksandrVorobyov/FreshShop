@@ -6,13 +6,18 @@
       p.blog-post__info-author-text {{ blog.author }}
       p.blog-post__info-author-text {{ blog.date }}
   .blog-post__img
-    router-link(:to="blog.href")
+    router-link(:to="blog.href", @click="scrollTop()")
       img(:src="require('@/assets/img/' + blog.src)", :alt="blog.alt")
 </template>
 <script>
 export default {
   props: {
     blog: Object,
+  },
+  methods: {
+    scrollTop() {
+      this.$store.commit("scrollTop");
+    },
   },
 };
 </script>
@@ -30,20 +35,20 @@ export default {
   gap: 24px;
   border-radius: 6px;
   overflow: hidden;
-  transition: box-shadow 0.3s linear, background 0.3s linear;
+  transition: background 0.3s linear;
   background: var(--bgCards);
+  box-shadow: 0px 0px 5px #0003;
 
   &:hover {
-    box-shadow: 0px 0px 5px #0003;
     background: var(--bgCards);
   }
 
   @media (min-width: 720px) {
-   justify-content: flex-start;
+    justify-content: flex-start;
   }
 
   @media (min-width: 1260px) {
-    background: transparent;
+    background: #fff;
   }
 }
 
