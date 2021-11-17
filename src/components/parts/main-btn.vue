@@ -1,11 +1,12 @@
 <template lang="pug">
-button.main-btn(@click="$emit('action')" :class="class") {{ btn }}
+button.main-btn(@click="$emit('action')" :class="class" :type="typeBtn ? typeBtn : 'button'") {{ btn }}
 </template>
 <script>
 export default {
   props: {
     btn: String,
     class: String,
+    typeBtn: String
   },
   emits: ["action"],
 };

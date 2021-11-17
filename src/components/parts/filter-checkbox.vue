@@ -1,6 +1,6 @@
 <template lang="pug">
 .filter-checkbox
-  label.filter-checkbox__label
+  label.filter-checkbox__label(:class="filterCheck.class")
     input.filter-checkbox__label-input(
       type="checkbox",
       :name="filterCheck.name",
@@ -19,14 +19,6 @@ export default {
 <style scoped lang="scss">
 .filter-checkbox {
   position: relative;
-  overflow: hidden;
-  z-index: 500;
-  padding: 9px 16px;
-  background: #f9f9f9;
-  border: 1px solid #d1d1d1;
-  border-radius: 12px;
-  display: inline-flex;
-  gap: 20px;
   user-select: none;
 }
 
@@ -43,6 +35,10 @@ export default {
 
 input:checked ~ .filter-checkbox__label-input-fake {
   background: var(--clrFilterInputGreen);
+
+  &::before {
+    opacity: 1;
+  }
 }
 
 .filter-checkbox__label-input-fake {
@@ -50,7 +46,7 @@ input:checked ~ .filter-checkbox__label-input-fake {
   margin-right: 10px;
   width: 24px;
   height: 24px;
-  border: 1.5px solid #d1d1d1;
+  border: 1.5px solid #818181;
   border-radius: 6px;
   background: transparent;
 
@@ -66,6 +62,12 @@ input:checked ~ .filter-checkbox__label-input-fake {
       contain no-repeat;
     border-radius: 6px;
     transition: all 0.4s linear;
+    opacity: 0;
   }
+}
+
+.shop-filter-form-star span {
+  color: gold;
+  font-size: 22px;
 }
 </style>

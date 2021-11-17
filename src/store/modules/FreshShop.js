@@ -39,6 +39,67 @@ export default {
                 nextBtn: "Next page",
                 pageNumber: 0,
                 maxComponetsImPage: '',
+            },
+            form: {
+                filterBrend: [
+                    {
+                        id: "shop-filter-form-brend-01",
+                        text: "Apple",
+                        name: "brend-filter"
+                    },
+                    {
+                        id: "shop-filter-form-brend-02",
+                        text: "Zara",
+                        name: "brend-filter"
+                    },
+                    {
+                        id: "shop-filter-form-brend-03",
+                        text: "Microsoft",
+                        name: "brend-filter"
+                    },
+                    {
+                        id: "shop-filter-form-brend-04",
+                        text: "Opel",
+                        name: "brend-filter"
+                    },
+                    {
+                        id: "shop-filter-form-brend-05",
+                        text: "Armani",
+                        name: "brend-filter"
+                    },
+                ],
+                filterStar: [
+                    {
+                        id: "shop-filter-form-star-01",
+                        text: "★☆☆☆☆",
+                        name: "star-filter",
+                        class: "shop-filter-form-star"
+                    },
+                    {
+                        id: "shop-filter-form-star-02",
+                        text: "★★☆☆☆",
+                        name: "star-filter",
+                        class: "shop-filter-form-star"
+                    },
+                    {
+                        id: "shop-filter-form-star-03",
+                        text: "★★★☆☆",
+                        name: "star-filter",
+                        class: "shop-filter-form-star"
+                    },
+                    {
+                        id: "shop-filter-form-star-04",
+                        text: "★★★★☆",
+                        name: "star-filter",
+                        class: "shop-filter-form-star"
+                    },
+                    {
+                        id: "shop-filter-form-star-05",
+                        text: "★★★★★",
+                        name: "star-filter",
+                        class: "shop-filter-form-star"
+                    },
+                ]
             }
         },
         shopProductCards: [],
@@ -148,6 +209,46 @@ export default {
                     });
                 }
             }
+        },
+        filterRangeOne() {
+            let sliderOne = document.getElementById("slider-1");
+            let sliderTwo = document.getElementById("slider-2");
+            let displayValOne = document.getElementById("range1");
+            let minGap = 0;
+            let sliderTrack = document.querySelector(".slider-track");
+            let sliderMaxValue = document.getElementById("slider-1").max;
+
+            function fillColor() {
+                let percent1 = (sliderOne.value / sliderMaxValue) * 100;
+                let percent2 = (sliderTwo.value / sliderMaxValue) * 100;
+                sliderTrack.style.background = `linear-gradient(to right, #dadae5 ${percent1}% , #20b2aa ${percent1}% , #20b2aa ${percent2}%, #dadae5 ${percent2}%)`;
+            }
+
+            if (parseInt(sliderTwo.value) - parseInt(sliderOne.value) <= minGap) {
+                sliderTwo.value = parseInt(sliderOne.value) + minGap;
+            }
+            displayValOne.textContent = `Min: ${sliderOne.value}$`;
+            fillColor();
+        },
+        filterRangeTwo() {
+            let sliderOne = document.getElementById("slider-1");
+            let sliderTwo = document.getElementById("slider-2");
+            let displayValTwo = document.getElementById("range2");
+            let minGap = 0;
+            let sliderTrack = document.querySelector(".slider-track");
+            let sliderMaxValue = document.getElementById("slider-1").max;
+
+            function fillColor() {
+                let percent1 = (sliderOne.value / sliderMaxValue) * 100;
+                let percent2 = (sliderTwo.value / sliderMaxValue) * 100;
+                sliderTrack.style.background = `linear-gradient(to right, #dadae5 ${percent1}% , #20b2aa ${percent1}% , #20b2aa ${percent2}%, #dadae5 ${percent2}%)`;
+            }
+
+            if (parseInt(sliderTwo.value) - parseInt(sliderOne.value) <= minGap) {
+                sliderTwo.value = parseInt(sliderOne.value) + minGap;
+            }
+            displayValTwo.textContent = `Max: ${sliderTwo.value}$`;
+            fillColor();
         }
     },
     actions: {
