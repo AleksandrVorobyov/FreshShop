@@ -1,7 +1,9 @@
 <template lang="pug">
 .menu-basket
   .menu-basket__item
-    button#menu-basket-profile.menu-basket__btn(@click="sectionLoginActive()")
+    button#menu-basket-profile.menu-basket__btn(
+      @click="formUnlockFunc()"
+    )
       user-icon
   .menu-basket__item
     button#menu-basket-cart.menu-basket__btn
@@ -20,8 +22,8 @@ export default {
     cartIcon,
   },
   methods: {
-    sectionLoginActive() {
-      this.$store.commit("sectionLoginActive");
+    formUnlockFunc() {
+      this.$store.dispatch("formUnlockFunc");
     },
   },
 };

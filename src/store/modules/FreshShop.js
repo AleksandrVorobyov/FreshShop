@@ -140,10 +140,8 @@ export default {
         shopPageWindow(state) {
             if (window.innerWidth > 1170) {
                 return state.shop.pagination.maxComponetsImPage = 14
-            } else if (window.innerWidth > 970 && window.innerWidth < 1170) {
-                return state.shop.pagination.maxComponetsImPage = 9
             } else {
-                return state.shop.pagination.maxComponetsImPage = 3
+                return state.shop.pagination.maxComponetsImPage = 9
             }
         },
         shopCardsPrev(state) {

@@ -34,12 +34,6 @@ export default {
     dropChange(e) {
       this.$store.commit("dropChange", e);
     },
-    clickOutDrop() {
-      this.$store.commit("clickOutDrop");
-    },
-  },
-  mounted() {
-    this.clickOutDrop();
   },
 };
 </script>

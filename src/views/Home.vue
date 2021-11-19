@@ -3,6 +3,7 @@
   header
     fresh-header
     fresh-login
+    fresh-form-sign
     fresh-navigation
   main
     fresh-promo-slider
@@ -19,6 +20,7 @@
 import FreshHeader from "@/components/FreshHeader.vue";
 import FreshNavigation from "@/components/FreshNavigation.vue";
 import FreshLogin from "@/components/FreshLogin.vue";
+import FreshFormSign from "@/components/FreshFormSign.vue";
 import FreshPromoSlider from "@/components/FreshPromoSlider.vue";
 import FreshPromoCards from "@/components/FreshPromoCards.vue";
 import FreshProductBest from "@/components/FreshProductBest.vue";
@@ -26,7 +28,7 @@ import FreshPromoCardsRow from "@/components/FreshPromoCardsRow.vue";
 import FreshProductPopular from "@/components/FreshProductPopular.vue";
 import FreshBlog from "@/components/FreshBlog.vue";
 import FreshFooter from "@/components/FreshFooter.vue";
-import { mapGetters, mapState } from "vuex";
+import { mapGetters } from "vuex";
 
 export default {
   name: "Home",
@@ -34,6 +36,7 @@ export default {
     FreshHeader,
     FreshNavigation,
     FreshLogin,
+    FreshFormSign,
     FreshPromoSlider,
     FreshPromoCards,
     FreshProductBest,

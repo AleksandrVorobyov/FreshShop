@@ -32,15 +32,6 @@ export default {
             return state.login;
         },
     },
-    mutations: {
-        changeToSign(state) {
-            console.log('fire!');
-        },
-
-        sectionLoginActive() {
-            document.getElementById("loginSection").classList.toggle("login--active")
-        },
-    },
     actions: {
         login({ commit, state }, products) {
             console.log(commit.login);

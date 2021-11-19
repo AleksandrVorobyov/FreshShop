@@ -1,44 +1,33 @@
 <template lang="pug">
-section#loginSection.login
+section#signSection.form-sign
   .container.relative
-    form.login__form
-      h4.login__title {{ login.create.title }}
-      label.login__label(:for="login.create.inputNameId") 
-        span {{ login.create.inputName }}
-      input.login__input(type="name", :id="login.create.inputNameId")
-      label.login__label(:for="login.create.inputEmailId") 
-        span {{ login.create.inputEmail }}
-      input.login__input(type="email", :id="login.create.inputEmailId")
-      label.login__label(:for="login.create.inputPasswordId") 
-        span {{ login.create.inputPassword }}
-      input.login__input(
+    form.form-sign-wrap
+      h4.form-sign__title {{ formSign.title }}
+      label.form-sign__label(:for="formSign.email.id") 
+        span {{ formSign.email.text }}
+      input.form-sign__input(type="email", :id="formSign.email.id")
+      label.form-sign__label(:for="formSign.password.id") 
+        span {{ formSign.password.text }}
+      input.form-sign__input(
         type="password",
-        :id="login.create.inputPasswordId",
-        :placeholder="login.create.inputPasswordPlace"
+        :id="formSign.password.id",
+        :placeholder="formSign.password.inputPasswordPlace"
       )
-      label.login__label(:for="login.create.inputPasswordRep") 
-        span {{ login.create.inputPasswordRep }}
-      input.login__input(
-        type="password",
-        :id="login.create.inputPasswordRep",
-        :placeholder="login.create.inputPasswordRepPlace"
-      )
-      p.login__form-desc {{ login.create.formDesc }}
-      main-btn(:btn="login.create.btn", :class="'login__form-btn'")
-      .login__form-btn-change
-        p.login__form-btn-change-text {{ login.create.changeFormText }}
-        button.login__form-btn-change-btn(
+      p.form-sign__form-desc {{ formSign.desc }}
+      main-btn(:btn="formSign.btnSubmit", :class="'form-sign__form-btn'")
+      .form-sign__form-btn-change
+        p.form-sign__form-btn-change-text {{ formSign.change.desc }}
+        button.form-sign__form-btn-change-btn(
           @click.prevent.stop="formLoginOrSignFunc()",
           type="button"
-        ) {{ login.create.changeFormBtn }}
+        ) {{ formSign.change.link }}
 </template>
-
 <script>
 import { mapGetters } from "vuex";
 import mainBtn from "./parts/main-btn.vue";
 export default {
   computed: {
-    ...mapGetters(["login"]),
+    ...mapGetters(["formSign"]),
   },
   components: {
     mainBtn,
@@ -51,21 +40,11 @@ export default {
 };
 </script>
 <style scoped lang="scss">
-.login {
+.form-sign {
   position: relative;
 }
 
-.login--active .login__form {
-  opacity: 1;
-  transform: translateX(50%) translateY(0px);
-  pointer-events: all;
-
-  @media (min-width: 970px) {
-    transform: translateY(0);
-  }
-}
-
-.login__form {
+.form-sign-wrap {
   position: absolute;
   top: 100%;
   right: 50%;
@@ -96,7 +75,17 @@ export default {
   }
 }
 
-.login__title {
+.form-sign--active .form-sign-wrap {
+  opacity: 1;
+  transform: translateX(50%) translateY(0px);
+  pointer-events: all;
+
+  @media (min-width: 970px) {
+    transform: translateY(0);
+  }
+}
+
+.form-sign__title {
   display: block;
   margin-bottom: 20px;
   font-size: 26px;
@@ -112,7 +101,7 @@ export default {
   }
 }
 
-.login__label {
+.form-sign__label {
   display: block;
   font-size: 18px;
   line-height: 1;
@@ -120,7 +109,7 @@ export default {
   letter-spacing: 1px;
 }
 
-.login__input {
+.form-sign__input {
   position: relative;
   display: block;
   width: 100%;
@@ -142,14 +131,14 @@ export default {
   }
 }
 
-.login__form-desc {
+.form-sign__form-desc {
   font-size: 14px;
   line-height: 1.5;
   color: var(--clrTtl);
   letter-spacing: 1px;
 }
 
-.main-btn.login__form-btn {
+.main-btn.form-sign__form-btn {
   padding: 10px 15px;
   font-size: 16px;
   line-height: 1;
@@ -157,13 +146,13 @@ export default {
   letter-spacing: 1px;
 }
 
-.login__form-btn-change {
+.form-sign__form-btn-change {
   display: flex;
   align-items: center;
 }
 
-.login__form-btn-change-text,
-.login__form-btn-change-btn {
+.form-sign__form-btn-change-text,
+.form-sign__form-btn-change-btn {
   display: inline-block;
   position: relative;
   border: none;
@@ -176,7 +165,7 @@ export default {
   text-align: left;
 }
 
-.login__form-btn-change-btn {
+.form-sign__form-btn-change-btn {
   transition: color 0.3s linear;
   cursor: pointer;
   color: var(--clrActivegreen);

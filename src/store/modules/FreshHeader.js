@@ -127,19 +127,6 @@ export default {
                 (e.target.textContent = oldDropTitle)
             );
         },
-        clickOutDrop() {
-            const headerSearchDropBody = document.getElementById(
-                "header-search-drop-body"
-            );
-
-            // document.onclick = function (e) {
-            //     if (e.target.className != "header-search__dropdown-head") {
-            //         headerSearchDropBody.classList.remove(
-            //             "header-search__dropdown-body--active"
-            //         );
-            //     }
-            // };
-        }
     },
     actions: {
         header({ commit, state }, products) {

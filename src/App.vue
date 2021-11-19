@@ -1,40 +1,14 @@
 <template lang="pug">
-#page.page
+#page.page(@click="clickDocument")
   <router-view/>
 </template>
 
 <script>
 export default {
-  mounted() {
-    document.onclick = function (e) {
-      const headerSearchDropBody = document.getElementById(
-        "header-search-drop-body"
-      );
-
-      if (
-        headerSearchDropBody.classList.contains(
-          "header-search__dropdown-body--active"
-        )
-      ) {
-        if (e.target.closest(".header-search__dropdown-body--active")) {
-          return true;
-        } else if (e.target.className != "header-search__dropdown-head") {
-          headerSearchDropBody.classList.remove(
-            "header-search__dropdown-body--active"
-          );
-        }
-      }
-
-      const loginSection = document.getElementById("loginSection");
-
-      if (loginSection.classList.contains("login--active")) {
-        if (e.target.closest(".login--active")) {
-          return true;
-        } else if (e.target.className != "menu-basket__btn") {
-          loginSection.classList.remove("login--active");
-        }
-      }
-    };
+  methods: {
+    clickDocument(e) {
+      this.$store.dispatch("clickDocument", e);
+    },
   },
 };
 </script>
