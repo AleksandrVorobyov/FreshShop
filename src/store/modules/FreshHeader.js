@@ -127,6 +127,18 @@ export default {
                 (e.target.textContent = oldDropTitle)
             );
         },
+        headerScroll(state) {
+            let scrollTop = window.scrollY;
+            let header = document.getElementById('headerPage');
+            if (scrollTop >= document.querySelector('.header').offsetHeight && !header.classList.contains("header--dark")) {
+                let headerMargin = document.querySelector('.header').offsetHeight;
+                header.classList.add("header--dark")
+                document.querySelector('header').style.marginTop = `${headerMargin}px`
+            } else if (scrollTop < 500 && header.classList.contains("header--dark")) {
+                header.classList.remove("header--dark")
+                document.querySelector('header').style.marginTop = `0px`
+            }
+        }
     },
     actions: {
         header({ commit, state }, products) {

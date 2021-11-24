@@ -1,12 +1,22 @@
 <template lang="pug">
-router-link.header__info-link.info-link(v-if="link.type == 'page'" :to="link.href", :class="link.class") {{ link.text }}
-a.header__info-link.info-link(v-if="link.type == 'link'" :href="link.href", :class="link.class") {{ link.text }}
+router-link.header__info-link.info-link(
+  v-if="link.type == 'page'",
+  :to="link.href",
+  :class="link.class",
+  @click="$emit('action')"
+) {{ link.text }}
+a.header__info-link.info-link(
+  v-if="link.type == 'link'",
+  :href="link.href",
+  :class="link.class"
+) {{ link.text }}
 </template>
 <script>
 export default {
   props: {
     link: Object,
   },
+  emits: ["action"],
 };
 </script>
 <style scoped lang="scss">
@@ -26,7 +36,7 @@ export default {
 
   &::before {
     position: absolute;
-    top: -15px;
+    top: -23px;
     left: 0;
     width: 100%;
     height: 4px;
@@ -34,6 +44,10 @@ export default {
     content: "";
     opacity: 0;
     transition: opacity 0.4s linear;
+
+    @media (min-width: 720px) {
+      top: -15px;
+    }
   }
 
   &:hover {

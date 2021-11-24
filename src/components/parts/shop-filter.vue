@@ -38,6 +38,7 @@ export default {
   display: flex;
   gap: 15px;
   margin-bottom: 15px;
+  flex-wrap: wrap;
 }
 
 .shop__filter-active {
@@ -52,9 +53,13 @@ export default {
 
 .shop__filter-list-check {
   position: relative;
-  padding: 9px 16px;
-  background: #f9f9f9;
+  padding: 5px 10px;
+  background: var(--bgHeaderSearch);
   border: 1px solid #d1d1d1;
   border-radius: 12px;
+
+  @media (min-width: 720px) {
+    padding: 9px 16px;
+  }
 }
 </style>

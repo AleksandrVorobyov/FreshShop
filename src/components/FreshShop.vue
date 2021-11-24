@@ -109,18 +109,26 @@ export default {
 }
 
 .shop__nav-products-title {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 700;
   color: var(--clrTtl);
+
+  @media (min-width: 720px) {
+    font-size: 20px;
+  }
 }
 
 .shop__nav-products-quantity {
   padding: 5px 10px;
   border-radius: 12px;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 700;
   color: var(--clrActivegreen);
   background: var(--bgBodyDrop);
+
+  @media (min-width: 720px) {
+    font-size: 16px;
+  }
 }
 
 .shop__body {

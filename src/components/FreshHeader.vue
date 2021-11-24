@@ -1,5 +1,5 @@
 <template lang="pug">
-section.header
+section#headerPage.header
   .container
     .header-wrap
       .header__info
@@ -13,7 +13,7 @@ section.header
           :class="item.class"
         )
           .header__info-item(v-for="link in item.col")
-            info-link(:link="link") 
+            info-link(:link="link" @action="scrollTop") 
       .header__nav
         .header__nav-logo-wrap
           logo(:logo="header.nav.logo")
@@ -39,12 +39,35 @@ export default {
     headerSearch,
     menuBasket,
   },
+  methods: {
+    headerScroll() {
+      this.$store.commit("headerScroll");
+    },
+    scrollTop() {
+      this.$store.dispatch("scrollTop");
+    },
+  },
+  mounted() {
+    window.addEventListener("scroll", this.headerScroll);
+  },
 };
 </script>
 <style scoped lang="scss">
 .header {
   position: relative;
   z-index: 1500;
+  width: 100%;
+
+  &--dark {
+    position: fixed;
+    top: 0;
+    background: rgba(0, 0, 0, 0.7);
+    animation: headerScrollAnim 0.4s linear 0s;
+
+    .header__nav {
+      display: none;
+    }
+  }
 }
 
 .header-wrap {
@@ -174,5 +197,12 @@ export default {
   line-height: 1;
   font-weight: 700;
   color: var(--clrWhite);
+}
+
+@keyframes headerScrollAnim {
+  from {
+    top: -200px;
+    opacity: 0;
+  }
 }
 </style>

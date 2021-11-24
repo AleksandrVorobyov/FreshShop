@@ -31,17 +31,16 @@ export default {
 .promo-cards-row-wrap {
   position: relative;
   display: grid;
-  grid-template-columns: repeat(2, 125px);
+  grid-template-columns: repeat(2, 1fr);
   justify-content: center;
   gap: 10px;
 
-  @media (min-width: 360px) {
-    grid-template-columns: repeat(2, 150px);
+  @media (min-width: 720px) {
+    gap: 20px;
   }
 
-  @media (min-width: 720px) {
+  @media (min-width: 920px) {
     grid-template-columns: repeat(2, 300px);
-    gap: 20px;
   }
 
   @media (min-width: 1260px) {

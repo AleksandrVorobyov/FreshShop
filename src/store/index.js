@@ -26,13 +26,6 @@ export default createStore({
     }
   },
   mutations: {
-    scrollTop() {
-      const blockID = document.getElementById('page')
-      blockID.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      })
-    },
     sectionLoginActive() {
       document.getElementById("loginSection").classList.add("login--active")
       if (document.getElementById("signSection").classList.contains("form-sign--active")) {
@@ -74,7 +67,7 @@ export default createStore({
         document.getElementById("loginSection").classList.remove("login--active")
       }
     },
-    clickDocument({state, dispatch}, e) {
+    clickDocument({ state, dispatch }, e) {
       const headerSearchDropBody = document.getElementById(
         "header-search-drop-body"
       );
@@ -114,6 +107,15 @@ export default createStore({
           dispatch("formUnlockFunc");
         }
       }
+    },
+    scrollTop() {
+      setTimeout(() => {
+        const blockID = document.getElementById('app')
+        blockID.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        })
+      }, 500);
     },
   },
   modules: {

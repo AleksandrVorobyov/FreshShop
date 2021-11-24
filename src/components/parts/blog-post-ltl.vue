@@ -28,11 +28,11 @@ export default {
   width: 100%;
   height: 100px;
   display: grid;
-  grid-template-columns: 249px 96px;
+  grid-template-columns: 185px 95px;
   grid-template-rows: 100px;
   align-items: center;
   justify-content: space-between;
-  gap: 24px;
+  gap: 10px;
   border-radius: 6px;
   overflow: hidden;
   transition: background 0.3s linear;
@@ -41,6 +41,10 @@ export default {
 
   &:hover {
     background: var(--bgCards);
+  }
+
+  @media (min-width: 360px) {
+    gap: 24px;
   }
 
   @media (min-width: 720px) {

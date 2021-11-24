@@ -126,11 +126,9 @@ ul {
   position: relative;
 }
 
-#home-page main,
-#shop-page main,
-#blog-page main {
+#page > div > main {
   padding: 25px 0;
-  background: linear-gradient(#fff, #fff);
+  background: linear-gradient(var(--bgMain), var(--bgMain));
   border-radius: 20px;
 
   & > section {

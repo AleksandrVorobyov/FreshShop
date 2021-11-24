@@ -58,9 +58,13 @@ export default {
 
 .blog__nav-title {
   font-weight: 600;
-  font-size: 24px;
+  font-size: 18px;
   line-height: 1;
   color: var(--clrTtl);
+
+  @media (min-width: 480px) {
+    font-size: 24px;
+  }
 }
 
 .blog__nav-link {
@@ -68,10 +72,14 @@ export default {
   display: block;
   padding-right: 15px;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1;
   color: var(--clrTtl);
   transition: all 0.3s linear;
+
+  @media (min-width: 480px) {
+    font-size: 18px;
+  }
 
   &::before {
     position: absolute;

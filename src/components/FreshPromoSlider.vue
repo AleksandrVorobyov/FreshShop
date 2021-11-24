@@ -66,6 +66,13 @@ export default {
   svg {
     fill: rgba(0, 0, 0, 0.6);
     transition: all 0.3s linear;
+    width: 1.5em;
+    height: 1.5em;
+
+    @media (min-width: 720px) {
+      width: 2.5em;
+      height: 2.5em;
+    }
   }
 
   &:hover {

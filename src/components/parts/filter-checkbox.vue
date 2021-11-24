@@ -29,8 +29,12 @@ export default {
 }
 
 .filter-checkbox__label-text {
-  font-size: 14px;
+  font-size: 12px;
   color: var(--clrTtl);
+
+  @media (min-width: 480px) {
+    font-size: 14px;
+  }
 }
 
 input:checked ~ .filter-checkbox__label-input-fake {
@@ -44,11 +48,16 @@ input:checked ~ .filter-checkbox__label-input-fake {
 .filter-checkbox__label-input-fake {
   position: relative;
   margin-right: 10px;
-  width: 24px;
-  height: 24px;
+  width: 16px;
+  height: 16px;
   border: 1.5px solid #818181;
   border-radius: 6px;
   background: transparent;
+
+  @media (min-width: 480px) {
+    width: 24px;
+    height: 24px;
+  }
 
   &::before {
     position: absolute;
