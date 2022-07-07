@@ -85,6 +85,12 @@ export default {
     font-size: 16px;
   }
 
+  @media (min-width: 480px) {
+    width: 12px;
+    height: 12px;
+    right: -20px;
+  }
+
   &::before {
     position: absolute;
     bottom: -12px;
@@ -98,10 +104,10 @@ export default {
 
   span {
     position: absolute;
-    width: 12px;
-    height: 12px;
+    width: 9px;
+    height: 9px;
     top: 60%;
-    right: -20px;
+    right: -15px;
     transform: translateY(-50%);
 
     svg {

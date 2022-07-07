@@ -24,7 +24,7 @@ export default {
   },
   methods: {
     scrollTop() {
-      this.$store.commit("scrollTop");
+      this.$store.dispatch("scrollTop");
     },
   },
 };
@@ -65,6 +65,7 @@ export default {
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: 5;
 }
 
 .blog-post-big__bg {

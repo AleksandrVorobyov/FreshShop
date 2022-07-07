@@ -359,11 +359,19 @@ export default {
             console.log('Form submit push');
         },
         scrollMidPost() {
-            const blockID = document.getElementById('blogPageBody')
-            blockID.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            })
+            if (window.innerWidth > 720) {
+                const blockID = document.getElementById('blogPageBody')
+                blockID.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                }) 
+            } else {
+                const blockID = document.getElementById('blog-page-body-cards')
+                blockID.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                })
+            }
         },
         blogPageWindow(state) {
             if (window.innerWidth > 1170) {

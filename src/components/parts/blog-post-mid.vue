@@ -17,7 +17,7 @@ export default {
   },
   methods: {
     scrollTop() {
-      this.$store.commit("scrollTop");
+      this.$store.dispatch("scrollTop");
     },
   },
 };

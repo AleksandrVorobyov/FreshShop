@@ -35,7 +35,7 @@ section.blog-page
                   :btn="item.subs.btn",
                   :class="'blog-page__body-sidebar-subs-btn'"
                 )
-        .blog-page__body-cards
+        .blog-page__body-cards#blog-page-body-cards
           blog-post-mid(v-for="item in paginatedData", :blog="item")
       .blog-page__paginationw
         pagination(
